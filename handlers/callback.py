@@ -155,22 +155,22 @@ async def home(callback: CallbackQuery, state: FSMContext):
 @callback_router.callback_query(F.data == "rep")
 async def help_text(callback: CallbackQuery):
     await callback.answer("")
-    await callback.message.answer(text="<b> Сcылка на жанр Реп, приятного прослушивание:</b>\nhttps://zvuk.com/search?query=%D1%80%D0%B5%D0%BF")
+    await callback.message.answer(text="Сcылка на жанр Реп, приятного прослушивание:\nhttps://zvuk.com/search?query=%D1%80%D0%B5%D0%BF")
 
 
 @callback_router.callback_query(F.data == "rok")
 async def help_text(callback: CallbackQuery):
     await callback.answer("")
-    await callback.message.answer(text="<b> Сcылка на жанр Рок, приятного прослушивание:</b>\nhttps://zvuk.com/search?query=%D1%80%D0%BE%D0%BA")
+    await callback.message.answer(text="Сcылка на жанр Рок, приятного прослушивание:\nhttps://zvuk.com/search?query=%D1%80%D0%BE%D0%BA")
 
 
 @callback_router.callback_query(F.data == "xip")
 async def help_text(callback: CallbackQuery):
     await callback.answer("")
-    await callback.message.answer(text="<b> Сcылка на жанр Хип-Хоп, приятного прослушивание:</b>\nhttps://zvuk.com/search?query=%D1%85%D0%B8%D0%BF%20%D1%85%D0%BE%D0%BF")
+    await callback.message.answer(text="Сcылка на жанр Хип-Хоп, приятного прослушивание:\nhttps://zvuk.com/search?query=%D1%85%D0%B8%D0%BF%20%D1%85%D0%BE%D0%BF")
 
 
 @callback_router.callback_query(F.data == "djaz")
 async def help_text(callback: CallbackQuery):
     await callback.answer("")
-    await callback.message.answer(text="<b> Сcылка на жанр Джаз, приятного прослушивание:</b>\nhttps://zvuk.com/search?query=%D0%B4%D0%B6%D0%B0%D0%B7")
+    await callback.message.answer(text="<Сcылка на жанр Джаз, приятного прослушивание:\nhttps://zvuk.com/search?query=%D0%B4%D0%B6%D0%B0%D0%B7")
