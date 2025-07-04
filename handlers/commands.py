@@ -1,12 +1,10 @@
 from aiogram.fsm.context import FSMContext
-from aiogram.types import Message, CallbackQuery
+from aiogram.types import Message
 from aiogram import Router, F
 from aiogram.filters import Command
 
-from keybords.inline import good_kb, top_kb, bb_kb, cop_kb
-from keybords.reply import menu_kb
-from aiogram.types import InputProfilePhoto
-from database import sqlite3, add_user
+from keybords.inline import good_kb, top_kb, cop_kb
+from database import add_user
 
 from keybords.states import Music
 

@@ -1,5 +1,5 @@
 from aiogram import Router, F
-from keybords.inline import xz_kb, daun_kb, bob_kb, good_kb, bb_kb
+from keybords.inline import xz_kb, bob_kb, good_kb, bb_kb
 from aiogram.types import CallbackQuery, InputMediaPhoto
 from aiogram.fsm.context import FSMContext
 
