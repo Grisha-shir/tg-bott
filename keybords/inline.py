@@ -1,51 +1,85 @@
-from xml.dom.expatbuilder import TEXT_NODE
-
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-about_kb = InlineKeyboardMarkup(
+
+
+good_kb = InlineKeyboardMarkup(
     inline_keyboard=[
-        [InlineKeyboardButton(text="Github", url="github.com"),
-        InlineKeyboardButton(text="Zvuk", url="https://zvuk.com/?utm_referrer=https%3A%2F%2Fzvuk.com%2F%3Futm_referrer%3Dhttps%253a%252f%252fwww.google.com%252f")],
-        [InlineKeyboardButton(text="Помощь", callback_data="show_help")]
+        [InlineKeyboardButton(text="🎶Найти музыку🎶", callback_data="keep")],
+        [InlineKeyboardButton(text="🆘Помощь🆘", callback_data="show_help")]
 
-    ]
-
+]
 )
 
-buttons_kb1 = InlineKeyboardMarkup(
-    inline_keyboard=[
-        [InlineKeyboardButton(text="Реп", callback_data="rep"),
-         InlineKeyboardButton(text="R&B", callback_data="R&B")],
-        [InlineKeyboardButton(text="️⬅", callback_data="prev"),
-         InlineKeyboardButton(text="➡", callback_data="next")]
 
-    ]
-)
-buttons_kb2 = InlineKeyboardMarkup(
+daun_kb = InlineKeyboardMarkup(
     inline_keyboard=[
-        [InlineKeyboardButton(text="Хип-Хоп", callback_data="Хип-Хоп"),
-         InlineKeyboardButton(text="", callback_data="")],
-        [InlineKeyboardButton(text="️⬅", callback_data="prev"),
-         InlineKeyboardButton(text="➡", callback_data="next")]
+        [InlineKeyboardButton(text="🔙В главное меню🔙", callback_data="home")]
 
-    ]
+]
 )
 
-kod_kb1 = InlineKeyboardMarkup(
+
+xz_kb = InlineKeyboardMarkup(
     inline_keyboard=[
-        [InlineKeyboardButton(text="80", callback_data="50"),
-         InlineKeyboardButton(text="90", callback_data="60")],
-        [InlineKeyboardButton(text="️⬅", callback_data="prev"),
-         InlineKeyboardButton(text="➡", callback_data="next")]
-    ]
+        [InlineKeyboardButton(text="По жанру", callback_data="genre")],
+        [InlineKeyboardButton(text="🔙В главное меню🔙", callback_data="home")]
+
+]
 )
 
-kod_kb2 = InlineKeyboardMarkup(
+
+
+bob_kb = InlineKeyboardMarkup(
     inline_keyboard=[
-        [InlineKeyboardButton(text="80", callback_data="60"),
-         InlineKeyboardButton(text="90", callback_data="70")],
-        [InlineKeyboardButton(text="️⬅", callback_data="prev"),
-         InlineKeyboardButton(text="➡", callback_data="next")]
-    ]
+    [InlineKeyboardButton(text="70-е годы", callback_data="sev"),
+     InlineKeyboardButton(text="80-е годы", callback_data="eig")],
+    [InlineKeyboardButton(text="90-е годы", callback_data="nine"),
+     InlineKeyboardButton(text="00-е годы", callback_data="ten")],
+    [InlineKeyboardButton(text="Новая музыка", callback_data="new")],
+    [InlineKeyboardButton(text="🔙Назад🔙", callback_data="back")],
+    [InlineKeyboardButton(text="🔙В главное меню🔙", callback_data="home")]
+
+]
 )
+
+
+bb_kb = InlineKeyboardMarkup(
+    inline_keyboard=[
+    [InlineKeyboardButton(text="Реп", callback_data="rep"),
+     InlineKeyboardButton(text="Рок", callback_data="rok")],
+    [InlineKeyboardButton(text="Хип-Хоп", callback_data="xip"),
+     InlineKeyboardButton(text="Джаз", callback_data="djaz")],
+    [InlineKeyboardButton(text="🔙Назад🔙", callback_data="back")],
+    [InlineKeyboardButton(text="🔙В главное меню🔙", callback_data="home")]
+
+]
+)
+
+
+top_kb = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [InlineKeyboardButton(text="Топ 100 Реп", url="https://zvuk.com/playlist/1062105"),
+         InlineKeyboardButton(text="Топ 100 Поп", url="https://zvuk.com/playlist/8404354")],
+        [InlineKeyboardButton(text="Топ 100 Джаз", url="https://zvuk.com/release/19604516"),
+         InlineKeyboardButton(text="Топ 100 Хип-Хоп", url="https://zvuk.com/playlist/8127767")],
+        [InlineKeyboardButton(text="Топ 100 Всех жанров", url="https://zvuk.com/playlist/5460882")],
+
+]
+)
+
+
+cop_kb = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [InlineKeyboardButton(text="Weeknd", url="https://zvuk.com/artist/873552"),
+         InlineKeyboardButton(text="PlayBoi Carti", url="https://zvuk.com/artist/3471532")],
+        [InlineKeyboardButton(text="Lil Uzi Vert", url="https://zvuk.com/artist/3331465"),
+         InlineKeyboardButton(text="Lil Tecca", url="https://zvuk.com/artist/209550423")],
+        [InlineKeyboardButton(text="Partynextdoor", url="https://zvuk.com/artist/1276994"),
+         InlineKeyboardButton(text="Drake", url="https://zvuk.com/artist/680032")],
+        [InlineKeyboardButton(text="Профиль автора", url="https://zvuk.com/profile/929907170")]
+
+]
+)
+
+
 
 
