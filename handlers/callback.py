@@ -51,6 +51,16 @@ async def home(callback: CallbackQuery, state: FSMContext):
     await callback.message.edit_media(media=media_start, reply_markup=xz_kb)
 
 
+@callback_router.callback_query(F.data == "back")
+async def home(callback: CallbackQuery, state: FSMContext):
+    await callback.answer("")
+    await state.clear()
+    home_text = "<b> Ты можешь выбрать что тебе угодно:</b>\n"
+
+    media_start= InputMediaPhoto(media="https://www.billboard.com/wp-content/uploads/2025/03/playboi-carti-rolling-loud-california-2025-billboard-1548.jpg", caption=home_text, parse_mode="HTML")
+    await callback.message.edit_media(media=media_start, reply_markup=bob_kb)
+
+
 @callback_router.callback_query(F.data == "artist")
 async def home(callback: CallbackQuery, state: FSMContext):
     await callback.answer("")
@@ -144,19 +154,23 @@ async def home(callback: CallbackQuery, state: FSMContext):
 
 @callback_router.callback_query(F.data == "rep")
 async def help_text(callback: CallbackQuery):
-    await callback.message.answer(text="Эта ссылка на ваш жанр:\nhttps://zvuk.com/search?query=%D1%80%D0%B5%D0%BF")
+    await callback.answer("")
+    await callback.message.answer(text="<b> Сcылка на жанр Реп, приятного прослушивание:</b>\nhttps://zvuk.com/search?query=%D1%80%D0%B5%D0%BF")
 
 
 @callback_router.callback_query(F.data == "rok")
 async def help_text(callback: CallbackQuery):
-    await callback.message.answer(text="Эта ссылка на ваш жанр:\nhttps://zvuk.com/search?query=%D1%80%D0%BE%D0%BA")
+    await callback.answer("")
+    await callback.message.answer(text="<b> Сcылка на жанр Рок, приятного прослушивание:</b>\nhttps://zvuk.com/search?query=%D1%80%D0%BE%D0%BA")
 
 
 @callback_router.callback_query(F.data == "xip")
 async def help_text(callback: CallbackQuery):
-    await callback.message.answer(text="Эта ссылка на ваш жанр:\nhttps://zvuk.com/search?query=%D1%85%D0%B8%D0%BF%20%D1%85%D0%BE%D0%BF")
+    await callback.answer("")
+    await callback.message.answer(text="<b> Сcылка на жанр Хип-Хоп, приятного прослушивание:</b>\nhttps://zvuk.com/search?query=%D1%85%D0%B8%D0%BF%20%D1%85%D0%BE%D0%BF")
 
 
 @callback_router.callback_query(F.data == "djaz")
 async def help_text(callback: CallbackQuery):
-    await callback.message.answer(text="Эта ссылка на ваш жанр:\nhttps://zvuk.com/search?query=%D0%B4%D0%B6%D0%B0%D0%B7")
+    await callback.answer("")
+    await callback.message.answer(text="<b> Сcылка на жанр Джаз, приятного прослушивание:</b>\nhttps://zvuk.com/search?query=%D0%B4%D0%B6%D0%B0%D0%B7")
